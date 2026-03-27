@@ -9,34 +9,39 @@
 
 ## 🚀 Project Overview
 
-Zanith Prime Pharmacare is a modern **Pharmacy Inventory Management System** built with **React.js**.
-It provides a centralized dashboard for managing medicines, tracking categories, and monitoring inventory using **Browser Local Storage** (no backend required).
+**Zanith Prime Pharmacare** is a modern **Pharmacy Inventory Management System** built using **React.js**.
+It provides a centralized admin dashboard to manage medicines, track categories, and monitor inventory efficiently using **Browser Local Storage** (no backend required).
 
 ---
 
-## ✨ Key Features & Business Logic
+## ✨ Key Features
 
-* 📊 **Interactive Dashboard**
-  Displays real-time statistics such as total products, category distribution, and equipment count.
+### 📊 Interactive Dashboard
 
-* ⚠️ **Low Stock Alert System**
-  Identifies medicines with fewer than 5 units remaining for quick restocking decisions.
+Displays real-time statistics including total products, category distribution, and equipment count.
 
-* 📦 **Full CRUD Operations**
+### ⚠️ Low Stock Alert System
 
-  * **Create:** Add new medicines with validation
-  * **Read:** View all products in a dynamic grid
-  * **Update:** Edit existing product details
-  * **Delete:** Remove products with confirmation
+Highlights medicines with fewer than 5 units remaining to ensure timely restocking.
 
-* 🔍 **Advanced Search & Filtering**
-  Search by product name and filter by category (Tablet, Syrup, Equipment, etc.).
+### 📦 Full CRUD Operations
 
-* 🖼️ **Image Upload with Live Preview**
-  Preview product image instantly before adding/editing.
+* **Create:** Add new medicines with validation
+* **Read:** View products in a dynamic and responsive grid
+* **Update:** Edit existing product details
+* **Delete:** Remove products with confirmation
 
-* 💾 **Local Storage Persistence**
-  Data remains saved even after page refresh or browser restart.
+### 🔍 Advanced Search & Filtering
+
+Search products by name and filter by category (Tablet, Syrup, Medical Equipment, Health & Safety).
+
+### 🖼️ Image Upload with Live Preview
+
+Preview product images instantly during the add/edit process.
+
+### 💾 Local Storage Persistence
+
+All data is stored in the browser and persists after refresh or restart.
 
 ---
 
@@ -52,12 +57,14 @@ It provides a centralized dashboard for managing medicines, tracking categories,
 
 ## 📂 Folder Structure
 
+```
 src/
-├── components/    # Sidebar, Navbar (Reusable UI)
+├── components/    # Reusable UI (Sidebar, Navbar)
 ├── pages/         # Dashboard, Products, Add/Edit Product
 ├── utils/         # localStorage.js (Data Handling)
 ├── App.jsx        # Routing & Layout
-└── main.jsx       # Entry Point
+└── main.jsx       # Application Entry Point
+```
 
 ---
 
@@ -81,13 +88,11 @@ http://localhost:5173
 * Fully responsive admin dashboard
 * Clean and modular code structure
 * Professional UI/UX design
-* No backend required (Local Storage based)
-* Built according to U Devs internship requirements
+* No backend required (Local Storage-based system)
+* Developed according to U Devs internship requirements
 
 ---
 
 ## 🔗 Repository Description
 
-A modern React.js Admin Dashboard for pharmacy inventory management with full CRUD, search, filtering, and Local Storage persistence.
-
----
+A modern React.js Admin Dashboard for pharmacy inventory management with full CRUD operations, search, filtering, and Local Storage persistence.
