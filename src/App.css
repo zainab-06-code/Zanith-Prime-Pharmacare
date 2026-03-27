@@ -1,42 +1,126 @@
+/* =========================================
+   1. RESET & ROOT CONFIGURATION
+   ========================================= */
 #root {
-  max-width: 1280px;
-  margin: 0 auto;
-  padding: 2rem;
-  text-align: center;
+  width: 100% !important;
+  max-width: 100% !important;
+  margin: 0 !important;
+  padding: 0 !important;
+  text-align: left !important;
 }
 
-.logo {
-  height: 6em;
-  padding: 1.5em;
-  will-change: filter;
-  transition: filter 300ms;
-}
-.logo:hover {
-  filter: drop-shadow(0 0 2em #646cffaa);
-}
-.logo.react:hover {
-  filter: drop-shadow(0 0 2em #61dafbaa);
+body, html {
+  margin: 0;
+  padding: 0;
+  width: 100%;
+  min-height: 100vh;
+  overflow-x: hidden;
+  transition: background 0.4s ease, color 0.4s ease;
 }
 
-@keyframes logo-spin {
-  from {
-    transform: rotate(0deg);
-  }
-  to {
-    transform: rotate(360deg);
-  }
+/* =========================================
+   2. POWER THEMES (LIGHT & DARK)
+   ========================================= */
+
+/* LIGHT MODE: Shaded Sky Blue */
+body {
+  background: linear-gradient(135deg, #f0f9ff 0%, #bae6fd 50%, #7dd3fc 100%);
+  background-attachment: fixed;
+  font-family: 'Poppins', sans-serif;
+  color: #1e293b;
 }
 
-@media (prefers-reduced-motion: no-preference) {
-  a:nth-of-type(2) .logo {
-    animation: logo-spin infinite 20s linear;
-  }
+/* DARK MODE: Power Midnight Navy */
+body.dark-theme {
+  background: linear-gradient(135deg, #0f172a 0%, #1e293b 50%, #334155 100%);
+  background-attachment: fixed;
+  color: #f1f5f9;
 }
 
+/* =========================================
+   3. PROFESSIONAL UI COMPONENTS
+   ========================================= */
+
+/* Glassmorphism Cards */
 .card {
-  padding: 2em;
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
+  border: 1px solid rgba(255, 255, 255, 0.3) !important;
+  border-radius: 20px !important;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.05) !important;
+  transition: all 0.3s ease;
 }
 
-.read-the-docs {
-  color: #888;
+body.dark-theme .card {
+  background: rgba(30, 41, 59, 0.7) !important;
+  border: 1px solid rgba(255, 255, 255, 0.1) !important;
+  color: #f1f5f9;
+}
+
+.card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 15px 35px rgba(0, 119, 255, 0.2) !important;
+}
+
+/* Sidebar & Content Layout */
+.app-wrapper {
+  display: flex;
+  width: 100%;
+  min-height: 100vh;
+}
+
+.main-content {
+  flex: 1;
+  margin-left: 250px; /* Aligns with Sidebar width */
+  padding: 30px;
+  width: calc(100% - 250px);
+  display: flex;
+  flex-direction: column;
+}
+
+/* =========================================
+   4. INPUTS, BUTTONS & TABLES
+   ========================================= */
+
+.form-control, .form-select {
+  border-radius: 12px;
+  border: 1px solid #cbd5e1;
+  padding: 12px;
+  background-color: rgba(255, 255, 255, 0.9);
+}
+
+body.dark-theme .form-control, body.dark-theme .form-select {
+  background-color: #1e293b;
+  border-color: #475569;
+  color: white;
+}
+
+.btn-success {
+  background: linear-gradient(45deg, #2D6A4F, #40916c) !important;
+  border: none !important;
+  padding: 12px 24px;
+  border-radius: 12px;
+  font-weight: 600;
+  box-shadow: 0 4px 15px rgba(45, 106, 79, 0.3);
+}
+
+.table {
+  background: transparent !important;
+}
+
+body.dark-theme .table {
+  color: #cbd5e1;
+}
+
+/* Navbar specific for Dark/Light */
+.navbar {
+  background: rgba(255, 255, 255, 0.8) !important;
+  backdrop-filter: blur(10px);
+  border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+
+body.dark-theme .navbar {
+  background: rgba(15, 23, 42, 0.9) !important;
+  border-bottom: 1px solid rgba(255,255,255,0.1);
 }
